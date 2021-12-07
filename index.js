@@ -2,6 +2,8 @@
 // OUTPUT: an array of the names
 // REQS: use .map
 
+import { countries } from './data';
+
 export const getCountryNames = (countries) => {
   const result = countries.map((countries) => countries.name);
   return result;
@@ -20,7 +22,11 @@ export const getCountryCodes = (countries) => {
 // OUTPUT: only countries in Oceana
 // REQS: use .filter
 
-export const filterOceania = (countries) => {};
+export const filterOceania = (countries) => {
+  //   const continent = countries.map((countries) => countries.continent);
+  const result = countries.filter((countries) => countries[0] === ('Oceania');
+  return result;
+};
 
 // INPUT: the array of countries from data.js
 // OUTPUT: only countries that include the letters 'au'
